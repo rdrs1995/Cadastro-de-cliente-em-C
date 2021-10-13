@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	printf("\n CADASTRO DE CLIENTE\n\n");
+	
+	struct ficha_do_cliente   /*Aqui criando a struct */
+	{
+		char nome[50];
+		char rua[50];
+		int telefone[11];
+		char email[40];
+		
+	}; struct ficha_do_cliente cliente; /*Aqui tem a ficha cliente*/
+	
+	printf("\n********** Lendo dados do Cliente **********\n\n\n");
+	
+	printf("Digite o nome do cliente: ");
+	fflush(stdin);
+	fgets(cliente.nome,50, stdin);
+	
+	printf("Rua: ");
+	fflush(stdin);
+	fgets(cliente.rua,30, stdin);
+	
+	printf("Tefelone: ");
+	scanf("%d", &cliente.telefone);
+	
+	printf("E-mail: ");
+	fflush(stdin);
+	fgets(cliente.email, 30 , stdin);
+	
+	printf("\n********** Imprimindo os dados da Struct ***********\n");
+	printf("*********** Nome.....:%s", cliente.nome);
+	printf("*********** Rua......:%s", cliente.rua);
+	printf("*********** Telefone: %d", cliente.telefone);
+	printf("\n************* E-mail...: %s", cliente.email);
+	printf("\n\n");
+
+	return 0;
+	
+}
